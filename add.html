@@ -1,0 +1,104 @@
+<html>
+
+<head>
+
+<title>Product Ad</title>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+
+<body>
+    <div class="container header">
+    <a href="/index.php">
+    <input type="submit" id="cancel" value="CANCEL" >
+    </a>
+
+    <form method="post" action="/php/connect.php">
+        
+        <input type="submit" id="save" value="SAVE">
+        
+        <h1><span>Product Add</span> </h1> 
+    
+    <hr >
+
+<table border="0" align="left">
+
+    <tr>
+    <td>SKU</td><td> <input  type="text" name="sku" id="sku"  value="" required></td>
+    </tr>
+    
+    <tr>
+    <td>Name</td> <td><input  type="text" name="name" id="name"  value="" required></td>
+    </tr>
+    
+    <tr>
+    <td>Price ($)</td><td><input placeholder="e.g. 100 or 150.25" type="number" name="price" id="price"  value="" step="0.01" required></td>
+    </tr>
+    
+    <tr>
+       
+    <td>Type Switcher</td><td>
+    <select id="productType">
+    <option value="ype Switcher"> Type Switcher </option>
+    <option value="DVD"> DVD</option>
+    <option value="Furniture"> Furniture</option>
+    <option value="Book"> Book</option>
+    </select>
+    </td>
+    </tr>
+</table>
+    
+
+
+      <div  id="showDVD" class="hidden">
+        <table  border="0" align="left">
+            <tr>
+            <td>Size (MB):</td> <td> <input placeholder="e.g.15 or 1.5" type="number" name="size" id="size"  value="" step="0.01"></td>
+            </tr> 
+            <td></td>
+            <td><p ><b> Please insert size memory (MB) of disk </b> </p></td>
+                
+                
+        </table> 
+    </div>
+
+    <div  id="showFurniture" class="hidden">
+        <table  border="0" align="left">
+            <tr>
+            <td>Height (CM):</td><td> <input placeholder="e.g.15 or 1.5" type="number" name="Height" id="Height"  value="" step="0.01" ></td>
+            </tr>  
+            <tr>
+            <td>Width (CM):</td><td> <input placeholder="15 or 1.5" type="number" name="Width" id="Width"  value="" step="0.01"></td>
+            </tr>
+            <tr>
+            <td>Length (CM):</td><td> <input placeholder="e.g.15 or 1.5" type="number" name="Length" id="Length"  value="" step="0.01"></td>
+             </tr>
+             <td></td>
+            <td><p ><b> Please provide dimensions in HxWxL format </b> </p></td>
+        </table>
+    </div>
+
+    <div  id="showBook" class="hidden">
+        <table  border="0" align="left">
+            <tr>
+            <td>Weight (KG):</td><td> <input placeholder="e.g.15 or 1.5" type="number" name="wei" id="wei"  value="" step="0.01" ></td>
+            </tr> 
+            <td></td>
+            <td><p ><b> Please insert KG of book </b> </p></td>
+        </table> 
+</form>
+    </div>
+ </div>     
+       <script>
+    $(document).ready(function(){
+        $('#productType').on('change', function(){
+            var demovalue = $(this).val(); 
+            $("div.hidden").hide();
+            $("#show"+demovalue).show();
+        });
+    });
+    </script> 
+
+</body>
+</html>

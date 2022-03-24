@@ -1,0 +1,72 @@
+.container {
+	position: relative;
+	width: 1110px;
+	margin: 0 auto;
+}
+
+h1>span {
+  text-align: left;
+}
+
+.Product{
+  width: 100%;
+  display: table;
+}
+
+#save, #cancel, #delite, #add{
+float: right;
+}
+#delite,#cancel,#save,#add {
+  background-color: white; 
+  color: black; 
+  padding: 10px 24px;
+  border-radius: 12px;
+}
+
+#delite:hover,#cancel:hover {
+  background-color: #f44336;
+  color: white;
+}
+
+#save:hover,#add:hover {
+  background-color: #3639f4;
+  color: white;
+}
+
+.hidden{
+  display: none;
+
+}
+
+#showDVD, #showFurniture, #showBook{
+  
+  margin-top: 115px;
+  
+}
+
+.product-item{
+    border: 1px solid;
+    border-radius: 5px;
+    width: 23.8%;
+    text-align: center;
+    float: left;
+    margin-right: 1%;
+    margin-bottom: 10px;
+}
+
+.product-item p{
+  padding: 0px 5px;
+  margin: 5px 0px;
+}
+
+.product-item input{
+  float: left;
+  margin: 10px;
+}
+
+#positionedhr{
+  margin-top: auto;
+}
+#positionedhrr{
+  margin-top: 300px;
+}
